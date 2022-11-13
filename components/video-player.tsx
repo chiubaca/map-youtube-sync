@@ -46,7 +46,6 @@ export default function VideoPlayer({
   };
 
   const handleProgress = (state: OnProgressProps) => {
-    console.log("onProgress", state);
     // We only want to update time slider if we are not currently seeking
     if (!videoState.seeking) {
       setVideoState({ ...videoState, ...state });
@@ -54,6 +53,17 @@ export default function VideoPlayer({
     }
     return;
   };
+
+  const [hasWindow, setHasWindow] = React.useState(false);
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setHasWindow(true);
+    }
+  }, []);
+
+  if (!hasWindow) {
+    return null;
+  }
 
   return (
     <div>
