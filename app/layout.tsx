@@ -14,17 +14,16 @@ export default function RootLayout({
       <head />
       <body className="flex flex-col min-h-screen">
         <header className="flex flex-row  justify-between p-10">
-          <span>My Store</span>
+          <span>My Cool App</span>
 
           <ul className="flex flex-row gap-10">
             <li>About</li>
-            <li>Checkout 🧺</li>
           </ul>
         </header>
 
         <div className=" flex-1">{children}</div>
 
-        <footer className=" text-center p-10">My Store ™️ (2022) </footer>
+        <footer className=" text-center p-10">My Cool App ™️ (2022) </footer>
       </body>
     </html>
   );
