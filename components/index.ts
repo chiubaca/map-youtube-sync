@@ -1,2 +1,2 @@
 export * from "./login-top-strava";
-export * from "./strava-route-map";
+export * from "./strava-route-map/strava-route-map";

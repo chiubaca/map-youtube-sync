@@ -1,5 +1,5 @@
 import LoginToStrava from "../components/login-top-strava";
-import StravaRouteMap from "../components/strava-route-map";
+import StravaRouteMap from "../components/strava-route-map/strava-route-map";
 import stravaClient from "../helpers/strava-client";
 
 interface StravaOauth {
@@ -31,14 +31,6 @@ const getStravaAuthToken = async (code: string | undefined) => {
 
     return null;
   }
-};
-
-const getStravaRoute = (routeid) => {
-  console.log(
-    "🚀 ~ file: page.tsx ~ line 39 ~ getStravaRoute ~ routeid",
-    routeid
-  );
-  return {};
 };
 
 export default async function Home({ searchParams }: Page) {
