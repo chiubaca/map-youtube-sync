@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import stravaClient from "../../helpers/strava-client";
 import Map from "./map";
 
 export default function Inputs({ stravaAuthToken }: { stravaAuthToken: any }) {

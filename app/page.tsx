@@ -1,3 +1,4 @@
+import ClientShell from "../components/client-shell";
 import LoginToStrava from "../components/login-top-strava";
 import StravaRouteMap from "../components/strava-route-map/strava-route-map";
 import stravaClient from "../helpers/strava-client";
@@ -38,15 +39,7 @@ export default async function Home({ searchParams }: Page) {
 
   return (
     <main className="grid justify-center ">
-      <div className="flex flex-col gap-10">
-        {!stravaAuthToken && <LoginToStrava />}
-
-        <StravaRouteMap stravaAuthToken={stravaAuthToken} />
-      </div>
-
-      <div className="fixed bottom-0 bg-red-300">
-        <p> strava auth token : {stravaAuthToken?.access_token}</p>
-      </div>
+      <ClientShell stravaAuthToken={stravaAuthToken} />
     </main>
   );
 }
